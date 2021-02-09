@@ -79,7 +79,7 @@ class ActivityBox: UICollectionViewCell {
 
   func setupCollection() {
     self.addSubview(todoBox)
-    self.todoBox.heightAnchor.constraint(equalToConstant: 70).isActive = true
+    self.todoBox.heightAnchor.constraint(equalToConstant: 60).isActive = true
     self.todoBox.widthAnchor.constraint(equalToConstant: 380).isActive = true
     self.todoBox.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -80).isActive = true
     self.todoBox.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
@@ -88,33 +88,33 @@ class ActivityBox: UICollectionViewCell {
     self.tituloAtividade.widthAnchor.constraint(equalToConstant: 200).isActive = true
     self.tituloAtividade.heightAnchor.constraint(equalToConstant: 30).isActive = true
     self.tituloAtividade.leadingAnchor.constraint(equalTo: self.todoBox.leadingAnchor, constant: 80).isActive = true
-    self.tituloAtividade.topAnchor.constraint(equalTo: self.todoBox.topAnchor, constant: 5).isActive = true
+    self.tituloAtividade.topAnchor.constraint(equalTo: self.todoBox.topAnchor, constant: 3).isActive = true
 
     self.addSubview(assunto)
     self.assunto.widthAnchor.constraint(equalToConstant: 100).isActive = true
     self.assunto.heightAnchor.constraint(equalToConstant: 30).isActive = true
     self.assunto.leadingAnchor.constraint(equalTo: self.todoBox.leadingAnchor, constant: 180).isActive = true
     self.assunto.trailingAnchor.constraint(equalTo: self.todoBox.leadingAnchor).isActive = true
-    self.assunto.topAnchor.constraint(equalTo: self.todoBox.topAnchor, constant: 30).isActive = true
+    self.assunto.topAnchor.constraint(equalTo: self.todoBox.topAnchor, constant: 27).isActive = true
 
     self.addSubview(dotSymbol1)
     self.dotSymbol1.widthAnchor.constraint(equalToConstant: 70).isActive = true
     self.dotSymbol1.heightAnchor.constraint(equalToConstant: 70).isActive = true
     self.dotSymbol1.leadingAnchor.constraint(equalTo: self.todoBox.leadingAnchor, constant: 167).isActive = true
-    self.dotSymbol1.topAnchor.constraint(equalTo: self.todoBox.topAnchor, constant: -5).isActive = true
+    self.dotSymbol1.topAnchor.constraint(equalTo: self.todoBox.topAnchor, constant: -7).isActive = true
 
     self.addSubview(codigoAssunto)
     self.codigoAssunto.widthAnchor.constraint(equalToConstant: 100).isActive = true
     self.codigoAssunto.heightAnchor.constraint(equalToConstant: 30).isActive = true
     self.codigoAssunto.leadingAnchor.constraint(equalTo: self.todoBox.leadingAnchor, constant: 90).isActive = true
     self.codigoAssunto.trailingAnchor.constraint(equalTo: self.todoBox.leadingAnchor).isActive = true
-    self.codigoAssunto.topAnchor.constraint(equalTo: self.todoBox.topAnchor, constant: 30).isActive = true
+    self.codigoAssunto.topAnchor.constraint(equalTo: self.todoBox.topAnchor, constant: 27).isActive = true
 
     self.addSubview(dotSymbol2)
     self.dotSymbol2.widthAnchor.constraint(equalToConstant: 70).isActive = true
     self.dotSymbol2.heightAnchor.constraint(equalToConstant: 70).isActive = true
     self.dotSymbol2.leadingAnchor.constraint(equalTo: self.todoBox.leadingAnchor, constant: 77).isActive = true
-    self.dotSymbol2.topAnchor.constraint(equalTo: self.todoBox.topAnchor, constant: -5).isActive = true
+    self.dotSymbol2.topAnchor.constraint(equalTo: self.todoBox.topAnchor, constant: -7).isActive = true
 
   }
 }

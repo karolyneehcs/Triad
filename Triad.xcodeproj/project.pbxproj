@@ -21,6 +21,9 @@
 		6856D4AB25CDB5B40087B85D /* ActivityBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D4AA25CDB5B40087B85D /* ActivityBox.swift */; };
 		6856D4AF25D15F1F0087B85D /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D4AE25D15F1F0087B85D /* ActivityController.swift */; };
 		6856D4B225D1619A0087B85D /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D4B125D1619A0087B85D /* InitialView.swift */; };
+		6856D4B825D2AFF80087B85D /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6856D4B625D2AFF80087B85D /* Task.xcdatamodeld */; };
+		6856D4BB25D2B0A50087B85D /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D4BA25D2B0A50087B85D /* TaskModel.swift */; };
+		6856D4BF25D2B1410087B85D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D4BE25D2B1410087B85D /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		6856D4AA25CDB5B40087B85D /* ActivityBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityBox.swift; sourceTree = "<group>"; };
 		6856D4AE25D15F1F0087B85D /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
 		6856D4B125D1619A0087B85D /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		6856D4B725D2AFF80087B85D /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
+		6856D4BA25D2B0A50087B85D /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		6856D4BE25D2B1410087B85D /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,9 @@
 		6856D49D25CD68430087B85D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6856D4B625D2AFF80087B85D /* Task.xcdatamodeld */,
+				6856D4BA25D2B0A50087B85D /* TaskModel.swift */,
+				6856D4BE25D2B1410087B85D /* CoreDataStack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +221,9 @@
 				6856D4AB25CDB5B40087B85D /* ActivityBox.swift in Sources */,
 				6856D4B225D1619A0087B85D /* InitialView.swift in Sources */,
 				6856D4A125CD68A80087B85D /* colors.swift in Sources */,
+				6856D4B825D2AFF80087B85D /* Task.xcdatamodeld in Sources */,
+				6856D4BF25D2B1410087B85D /* CoreDataStack.swift in Sources */,
+				6856D4BB25D2B0A50087B85D /* TaskModel.swift in Sources */,
 				6856D4AF25D15F1F0087B85D /* ActivityController.swift in Sources */,
 				6856D48125CD65220087B85D /* AppDelegate.swift in Sources */,
 				6856D4A425CD6CFE0087B85D /* TodoCard.swift in Sources */,
@@ -425,6 +437,16 @@
 			);
 			currentVersion = 6856D48A25CD65220087B85D /* Triad.xcdatamodel */;
 			path = Triad.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		6856D4B625D2AFF80087B85D /* Task.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6856D4B725D2AFF80087B85D /* TaskModel.xcdatamodel */,
+			);
+			currentVersion = 6856D4B725D2AFF80087B85D /* TaskModel.xcdatamodel */;
+			path = Task.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

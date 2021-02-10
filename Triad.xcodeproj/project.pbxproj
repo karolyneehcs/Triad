@@ -24,7 +24,22 @@
 		6856D4B825D2AFF80087B85D /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6856D4B625D2AFF80087B85D /* Task.xcdatamodeld */; };
 		6856D4BB25D2B0A50087B85D /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D4BA25D2B0A50087B85D /* TaskModel.swift */; };
 		6856D4BF25D2B1410087B85D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D4BE25D2B1410087B85D /* CoreDataStack.swift */; };
+		6856D4EF25D2CB870087B85D /* TriadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D4EE25D2CB870087B85D /* TriadTests.swift */; };
+		6856D4FB25D2CBBE0087B85D /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D4FA25D2CBBE0087B85D /* TestCoreDataStack.swift */; };
+		6856D50125D342910087B85D /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D50025D342910087B85D /* TimerView.swift */; };
+		6856D50525D401E30087B85D /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D50425D401E30087B85D /* CountdownViewController.swift */; };
+		6856D50D25D405AF0087B85D /* TestTriad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D50C25D405AF0087B85D /* TestTriad.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6856D4F125D2CB870087B85D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6856D47525CD65220087B85D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6856D47C25CD65220087B85D;
+			remoteInfo = Triad;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6856D47D25CD65220087B85D /* Triad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Triad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,10 +61,24 @@
 		6856D4B725D2AFF80087B85D /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
 		6856D4BA25D2B0A50087B85D /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		6856D4BE25D2B1410087B85D /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		6856D4EC25D2CB870087B85D /* TriadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6856D4EE25D2CB870087B85D /* TriadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriadTests.swift; sourceTree = "<group>"; };
+		6856D4F025D2CB870087B85D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6856D4FA25D2CBBE0087B85D /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
+		6856D50025D342910087B85D /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		6856D50425D401E30087B85D /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
+		6856D50C25D405AF0087B85D /* TestTriad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTriad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6856D47A25CD65220087B85D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6856D4E925D2CB870087B85D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,6 +93,7 @@
 			children = (
 				6856D49925CD66C00087B85D /* .swiftlint.yml */,
 				6856D47F25CD65220087B85D /* Triad */,
+				6856D4ED25D2CB870087B85D /* TriadTests */,
 				6856D47E25CD65220087B85D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				6856D47D25CD65220087B85D /* Triad.app */,
+				6856D4EC25D2CB870087B85D /* TriadTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +128,7 @@
 		6856D49D25CD68430087B85D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6856D4A725CDB53B0087B85D /* CardContent.swift */,
 				6856D4B625D2AFF80087B85D /* Task.xcdatamodeld */,
 				6856D4BA25D2B0A50087B85D /* TaskModel.swift */,
 				6856D4BE25D2B1410087B85D /* CoreDataStack.swift */,
@@ -111,6 +143,9 @@
 				6856D4AA25CDB5B40087B85D /* ActivityBox.swift */,
 				6856D4A325CD6CFE0087B85D /* TodoCard.swift */,
 				6856D4B125D1619A0087B85D /* InitialView.swift */,
+				6856D50025D342910087B85D /* TimerView.swift */,
+				6856D4AE25D15F1F0087B85D /* ActivityController.swift */,
+				6856D50425D401E30087B85D /* CountdownViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,10 +153,19 @@
 		6856D49F25CD684F0087B85D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				6856D4A725CDB53B0087B85D /* CardContent.swift */,
-				6856D4AE25D15F1F0087B85D /* ActivityController.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6856D4ED25D2CB870087B85D /* TriadTests */ = {
+			isa = PBXGroup;
+			children = (
+				6856D4EE25D2CB870087B85D /* TriadTests.swift */,
+				6856D4F025D2CB870087B85D /* Info.plist */,
+				6856D4FA25D2CBBE0087B85D /* TestCoreDataStack.swift */,
+				6856D50C25D405AF0087B85D /* TestTriad.swift */,
+			);
+			path = TriadTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +189,24 @@
 			productReference = 6856D47D25CD65220087B85D /* Triad.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6856D4EB25D2CB870087B85D /* TriadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6856D4F325D2CB870087B85D /* Build configuration list for PBXNativeTarget "TriadTests" */;
+			buildPhases = (
+				6856D4E825D2CB870087B85D /* Sources */,
+				6856D4E925D2CB870087B85D /* Frameworks */,
+				6856D4EA25D2CB870087B85D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6856D4F225D2CB870087B85D /* PBXTargetDependency */,
+			);
+			name = TriadTests;
+			productName = TriadTests;
+			productReference = 6856D4EC25D2CB870087B85D /* TriadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -156,6 +218,10 @@
 				TargetAttributes = {
 					6856D47C25CD65220087B85D = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					6856D4EB25D2CB870087B85D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 6856D47C25CD65220087B85D;
 					};
 				};
 			};
@@ -173,6 +239,7 @@
 			projectRoot = "";
 			targets = (
 				6856D47C25CD65220087B85D /* Triad */,
+				6856D4EB25D2CB870087B85D /* TriadTests */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +253,13 @@
 				6856D49025CD65230087B85D /* LaunchScreen.storyboard in Resources */,
 				6856D48D25CD65230087B85D /* Assets.xcassets in Resources */,
 				6856D48825CD65220087B85D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6856D4EA25D2CB870087B85D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,11 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6856D50125D342910087B85D /* TimerView.swift in Sources */,
 				6856D48525CD65220087B85D /* ViewController.swift in Sources */,
 				6856D4A825CDB53B0087B85D /* CardContent.swift in Sources */,
 				6856D4AB25CDB5B40087B85D /* ActivityBox.swift in Sources */,
 				6856D4B225D1619A0087B85D /* InitialView.swift in Sources */,
 				6856D4A125CD68A80087B85D /* colors.swift in Sources */,
+				6856D50525D401E30087B85D /* CountdownViewController.swift in Sources */,
 				6856D4B825D2AFF80087B85D /* Task.xcdatamodeld in Sources */,
 				6856D4BF25D2B1410087B85D /* CoreDataStack.swift in Sources */,
 				6856D4BB25D2B0A50087B85D /* TaskModel.swift in Sources */,
@@ -232,7 +308,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6856D4E825D2CB870087B85D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6856D4EF25D2CB870087B85D /* TriadTests.swift in Sources */,
+				6856D4FB25D2CBBE0087B85D /* TestCoreDataStack.swift in Sources */,
+				6856D50D25D405AF0087B85D /* TestTriad.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6856D4F225D2CB870087B85D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6856D47C25CD65220087B85D /* Triad */;
+			targetProxy = 6856D4F125D2CB870087B85D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6856D48625CD65220087B85D /* Main.storyboard */ = {
@@ -312,6 +406,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -366,6 +461,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -406,6 +502,46 @@
 			};
 			name = Release;
 		};
+		6856D4F425D2CB870087B85D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78HCYJFJ6W;
+				INFOPLIST_FILE = TriadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = karol.TriadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Triad.app/Triad";
+			};
+			name = Debug;
+		};
+		6856D4F525D2CB870087B85D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78HCYJFJ6W;
+				INFOPLIST_FILE = TriadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = karol.TriadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Triad.app/Triad";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -423,6 +559,15 @@
 			buildConfigurations = (
 				6856D49525CD65230087B85D /* Debug */,
 				6856D49625CD65230087B85D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6856D4F325D2CB870087B85D /* Build configuration list for PBXNativeTarget "TriadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6856D4F425D2CB870087B85D /* Debug */,
+				6856D4F525D2CB870087B85D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

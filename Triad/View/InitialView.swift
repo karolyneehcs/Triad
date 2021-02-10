@@ -8,6 +8,7 @@
 import UIKit
 
 class InitialView: UIView {
+
   let todoCard : TodoCard = {
     let todoCard = TodoCard()
     todoCard.translatesAutoresizingMaskIntoConstraints = false
@@ -17,6 +18,23 @@ class InitialView: UIView {
     let activityBox = ActivityBox()
     activityBox.translatesAutoresizingMaskIntoConstraints = false
     return activityBox
+  }()
+
+  let timerView: TimerView = {
+    let timerView = TimerView()
+    timerView.translatesAutoresizingMaskIntoConstraints = false
+    return timerView
+  }()
+
+  let PauseButton : UIButton = {
+    let button = UIButton()
+    let mediumConfiguration = UIImage.SymbolConfiguration(scale: .medium)
+    let imageSymbol = UIImage(systemName: "stop", withConfiguration: mediumConfiguration)
+    let imageSymbolNew = imageSymbol?.withTintColor(.systemBlue, renderingMode: .alwaysOriginal)
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.setImage(imageSymbolNew, for: .normal)
+    button.setTitleColor(.systemPink, for: .normal)
+    return button
   }()
 
   override init(frame: CGRect) {
@@ -32,6 +50,11 @@ class InitialView: UIView {
                                  self.activityBox.bottomAnchor.constraint(equalTo: self.bottomAnchor),
                                  self.activityBox.trailingAnchor.constraint(equalTo: self.trailingAnchor),
                                  self.activityBox.leadingAnchor.constraint(equalTo: self.leadingAnchor)])
+    self.addSubview(timerView)
+    NSLayoutConstraint.activate([self.timerView.topAnchor.constraint(equalTo: self.topAnchor),
+                                 self.timerView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+                                 self.timerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+                                 self.timerView.leadingAnchor.constraint(equalTo: self.leadingAnchor)])
 
    }
 

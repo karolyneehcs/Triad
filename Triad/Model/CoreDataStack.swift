@@ -8,15 +8,15 @@
 import UIKit
 import CoreData
 
-class CoreDataStack {
-    private let modelName: String = "Task"
+open class CoreDataStack {
+    public let modelName: String = "Task"
     public static let shared = CoreDataStack()
-    private init() {}
+    public init() {}
 
     lazy var mainContext: NSManagedObjectContext = {
         return self.storeContainer.viewContext
     }()
-    private lazy var storeContainer: NSPersistentContainer = {
+    public lazy var storeContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: self.modelName)
         container.loadPersistentStores { (_, error) in
             if let error = error as NSError? {

@@ -10,10 +10,16 @@ import CoreData
 
 class TaskModel {
 
-  let coreDataStack = CoreDataStack.shared
+  let managedObject : NSManagedObjectContext
+  let coreDataStack : CoreDataStack
+
+  public init(managedObject: NSManagedObjectContext, coreDataStack: CoreDataStack) {
+    self.managedObject = managedObject
+    self.coreDataStack = coreDataStack
+  }
 
   func createTask(title: String, code: String, lesson: String) -> Bool {
-    let task = Task()
+    let task = Task(context: coreDataStack.mainContext)
     task.title = String(title)
     task.code = String(code)
     task.lesson = String(lesson)
@@ -41,13 +47,13 @@ class TaskModel {
       return nil
   }
 
-  func deleteDaily(id: UUID) -> Bool {
-      let dailyRequest: NSFetchRequest<Task> = Task.fetchRequest()
-      dailyRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+  func deleteTask(id: UUID) -> Bool {
+      let taskRequest: NSFetchRequest<Task> = Task.fetchRequest()
+      taskRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
 
       do {
-          let dailyResults = try coreDataStack.mainContext.fetch(dailyRequest)
-          if let object = dailyResults.first {
+          let taskResults = try coreDataStack.mainContext.fetch(taskRequest)
+          if let object = taskResults.first {
               coreDataStack.mainContext.delete(object)
               coreDataStack.saveContext()
               return true

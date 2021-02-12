@@ -81,7 +81,7 @@ class ActivityBox: UICollectionViewCell {
     self.addSubview(todoBox)
     self.todoBox.heightAnchor.constraint(equalToConstant: 65).isActive = true
     self.todoBox.widthAnchor.constraint(equalToConstant: 380).isActive = true
-    self.todoBox.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -80).isActive = true
+    self.todoBox.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     self.todoBox.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
 
     self.addSubview(tituloAtividade)

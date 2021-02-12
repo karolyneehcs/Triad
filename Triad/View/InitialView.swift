@@ -9,15 +9,32 @@ import UIKit
 
 class InitialView: UIView {
 
-  let todoCard : TodoCard = {
+  lazy var todoCard : TodoCard = {
     let todoCard = TodoCard()
     todoCard.translatesAutoresizingMaskIntoConstraints = false
     return todoCard
   }()
-  let activityBox : ActivityBox = {
-    let activityBox = ActivityBox()
-    activityBox.translatesAutoresizingMaskIntoConstraints = false
-    return activityBox
+
+  let addActivity : AddActivity = {
+    let addActivity = AddActivity()
+    return addActivity
+  }()
+
+  let collectionView: UICollectionView = {
+    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+    layout.scrollDirection = .vertical
+    layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+    layout.itemSize = CGSize(width: 380, height: 65)
+    collectionView.register(ActivityBox.self, forCellWithReuseIdentifier: "cellId")
+    collectionView.backgroundColor = .clear
+    collectionView.isScrollEnabled = true
+    return collectionView
+  }()
+
+  let activityController : ActivityController = {
+    let activityController = ActivityController()
+    return activityController
   }()
 
   let timerView: TimerView = {
@@ -37,24 +54,38 @@ class InitialView: UIView {
     return button
   }()
 
-  override init(frame: CGRect) {
-     super.init(frame: frame)
+  init(todoCardHandler : @escaping () -> Void) {
+    super.init(frame: .zero)
+
+    self.todoCard.buttonHandler = todoCardHandler
+
+    self.isUserInteractionEnabled = true
+    collectionView.isUserInteractionEnabled = true
     self.backgroundColor = .mainBlue
-    self.addSubview(todoCard)
-    NSLayoutConstraint.activate([self.todoCard.topAnchor.constraint(equalTo: self.topAnchor),
-                                 self.todoCard.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                                 self.todoCard.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-                                 self.todoCard.leadingAnchor.constraint(equalTo: self.leadingAnchor)])
-    self.addSubview(activityBox)
-    NSLayoutConstraint.activate([self.activityBox.topAnchor.constraint(equalTo: self.topAnchor),
-                                 self.activityBox.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                                 self.activityBox.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-                                 self.activityBox.leadingAnchor.constraint(equalTo: self.leadingAnchor)])
+
     self.addSubview(timerView)
     NSLayoutConstraint.activate([self.timerView.topAnchor.constraint(equalTo: self.topAnchor),
                                  self.timerView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
                                  self.timerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
                                  self.timerView.leadingAnchor.constraint(equalTo: self.leadingAnchor)])
+
+    self.addSubview(todoCard)
+    NSLayoutConstraint.activate([self.todoCard.topAnchor.constraint(equalTo: self.topAnchor),
+                                 self.todoCard.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+                                 self.todoCard.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+                                 self.todoCard.leadingAnchor.constraint(equalTo: self.leadingAnchor)])
+//    self.addSubview(activityBox)
+//    NSLayoutConstraint.activate([self.activityBox.topAnchor.constraint(equalTo: self.topAnchor),
+//                                 self.activityBox.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+//                                 self.activityBox.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+//                                 self.activityBox.leadingAnchor.constraint(equalTo: self.leadingAnchor)])
+
+    self.addSubview(collectionView)
+    collectionView.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate([self.collectionView.topAnchor.constraint(equalTo: todoCard.todoCard.topAnchor, constant: 50),
+                                 self.collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+                                 self.collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+                                 self.collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -200)])
 
    }
 

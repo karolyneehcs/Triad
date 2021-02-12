@@ -9,6 +9,8 @@ import UIKit
 
 class TodoCard: UIView {
 
+  var buttonHandler: () -> Void = { }
+
   let titleLabel : UILabel = {
     let label = UILabel()
     label.text = "TODO"
@@ -43,7 +45,7 @@ class TodoCard: UIView {
     return card
   }()
 
-  let addActivity : UIButton = {
+  lazy var addActivity : UIButton = {
     let button = UIButton()
     let largeConfiguration = UIImage.SymbolConfiguration(scale: .large)
     let imageSymbol = UIImage(systemName: "plus", withConfiguration: largeConfiguration)
@@ -51,8 +53,13 @@ class TodoCard: UIView {
     button.translatesAutoresizingMaskIntoConstraints = false
     button.setImage(imageSymbolNew, for: .normal)
     button.setTitleColor(.systemPink, for: .normal)
+    button.addTarget(self, action: #selector(addActivityHandler), for: .touchUpInside)
     return button
   }()
+
+  @objc func addActivityHandler() {
+    buttonHandler()
+  }
 
   override init(frame: CGRect) {
      super.init(frame: frame)

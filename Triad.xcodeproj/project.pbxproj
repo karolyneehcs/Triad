@@ -29,6 +29,7 @@
 		6856D50125D342910087B85D /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D50025D342910087B85D /* TimerView.swift */; };
 		6856D50525D401E30087B85D /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D50425D401E30087B85D /* CountdownViewController.swift */; };
 		6856D50D25D405AF0087B85D /* TestTriad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D50C25D405AF0087B85D /* TestTriad.swift */; };
+		6856D51525D5509B0087B85D /* AddActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6856D51425D5509B0087B85D /* AddActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		6856D50025D342910087B85D /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		6856D50425D401E30087B85D /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		6856D50C25D405AF0087B85D /* TestTriad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTriad.swift; sourceTree = "<group>"; };
+		6856D51425D5509B0087B85D /* AddActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				6856D50025D342910087B85D /* TimerView.swift */,
 				6856D4AE25D15F1F0087B85D /* ActivityController.swift */,
 				6856D50425D401E30087B85D /* CountdownViewController.swift */,
+				6856D51425D5509B0087B85D /* AddActivity.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			files = (
 				6856D50125D342910087B85D /* TimerView.swift in Sources */,
 				6856D48525CD65220087B85D /* ViewController.swift in Sources */,
+				6856D51525D5509B0087B85D /* AddActivity.swift in Sources */,
 				6856D4A825CDB53B0087B85D /* CardContent.swift in Sources */,
 				6856D4AB25CDB5B40087B85D /* ActivityBox.swift in Sources */,
 				6856D4B225D1619A0087B85D /* InitialView.swift in Sources */,

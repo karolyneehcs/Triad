@@ -52,5 +52,4 @@ class TestModelTriad: XCTestCase {
     XCTAssertNotNil(sut)
   }
 
-
 }

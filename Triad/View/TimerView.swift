@@ -56,21 +56,21 @@ class TimerView: UIView {
   }()
 
   func setupControls() {
-    self.addSubview(PlayButton)
-    PlayButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-    PlayButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 200).isActive = true
-
-    self.addSubview(StopButton)
-    StopButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 200).isActive = true
-    StopButton.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 100).isActive = true
-
-    self.addSubview(PauseButton)
-    PauseButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 200).isActive = true
-    PauseButton.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -100).isActive = true
-
-    self.addSubview(ConfigureTimerButton)
-    ConfigureTimerButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive = true
-    ConfigureTimerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25).isActive = true
+//    self.addSubview(PlayButton)
+//    PlayButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+//    PlayButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 200).isActive = true
+//
+//    self.addSubview(StopButton)
+//    StopButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 200).isActive = true
+//    StopButton.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 100).isActive = true
+//
+//    self.addSubview(PauseButton)
+//    PauseButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 200).isActive = true
+//    PauseButton.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: -100).isActive = true
+//
+//    self.addSubview(ConfigureTimerButton)
+//    ConfigureTimerButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 50).isActive = true
+//    ConfigureTimerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -25).isActive = true
   }
 
   required init?(coder: NSCoder) {

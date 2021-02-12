@@ -52,4 +52,17 @@ class TestModelTriad: XCTestCase {
     XCTAssertNotNil(sut)
   }
 
+  func testDeleteTask_True(){
+    //given
+    let title = "Fazer probest"
+    let code = "502.01.29"
+    let assunto = "ProbEst"
+    taskModel.createTask(title: title, code: code, lesson: assunto)
+    let taskDel = taskModel.readTask()!
+    //when
+    let sut = taskModel.deleteTask(task: taskDel)
+    //then
+    XCTAssertTrue(sut)
+  }
+
 }

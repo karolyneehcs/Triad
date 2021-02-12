@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import CoreData
 
 class AddActivity: UIViewController {
+
+  weak var delegate: AddDataDelegate?
+  let taskModel = TaskModel(managedObject: CoreDataStack.shared.mainContext, coreDataStack: CoreDataStack.shared)
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -99,7 +103,12 @@ class AddActivity: UIViewController {
   }
 
   @objc func done() {
-    //save action 
+    //save action
+    guard let activityField = ActivityField.text else { return }
+    guard let lessonField = LessonField.text else { return }
+    guard let codeField = CodeField.text else { return }
+    delegate?.didSaveInput(title: activityField, code : codeField, lesson: lessonField)
+    self.dismiss(animated: true, completion: nil)
   }
 
   func setupModal() {

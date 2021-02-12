@@ -29,7 +29,7 @@ class ActivityBox: UICollectionViewCell {
     return box
   }()
 
-  let tituloAtividade : UILabel = {
+  var tituloAtividade : UILabel = {
     let tituloAtividade = UILabel()
     tituloAtividade.text = "Entregar Artigo Científico"
     tituloAtividade.font = UIFont.systemFont(ofSize: 17)
@@ -57,7 +57,7 @@ class ActivityBox: UICollectionViewCell {
     return dotSymbol
   }()
 
-  let codigoAssunto : UILabel = {
+  var codigoAssunto : UILabel = {
     let codigoAssunto = UILabel()
     codigoAssunto.text = "01.502.19"
     codigoAssunto.font = UIFont.systemFont(ofSize: 13)
@@ -67,7 +67,7 @@ class ActivityBox: UICollectionViewCell {
     return codigoAssunto
   }()
 
-  let assunto : UILabel = {
+  var assunto : UILabel = {
     let assunto = UILabel()
     assunto.text = "Metodologia"
     assunto.font = UIFont.systemFont(ofSize: 13)

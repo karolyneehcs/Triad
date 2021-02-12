@@ -7,8 +7,9 @@
 
 import UIKit
 
-struct CardContent {
+struct CardContent : Hashable {
   let title: String
   let subject: String
   let codeOfSubject: String
+
 }

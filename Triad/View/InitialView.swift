@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AddDataDelegate: class {
+  func didSaveInput(title: String, code: String, lesson: String)
+}
+
 class InitialView: UIView {
 
   lazy var todoCard : TodoCard = {
@@ -93,3 +97,4 @@ class InitialView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 }
+

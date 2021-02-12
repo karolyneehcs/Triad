@@ -33,7 +33,7 @@ class TaskModel {
       }
   }
 
-  func readAllTask() -> Task? {
+  func readTask() -> Task? {
       let dailyRequest: NSFetchRequest<Task> = Task.fetchRequest()
       do {
           let dailyResults = try coreDataStack.mainContext.fetch(dailyRequest)
@@ -47,23 +47,30 @@ class TaskModel {
       return nil
   }
 
-  func deleteTask(id: UUID) -> Bool {
-      let taskRequest: NSFetchRequest<Task> = Task.fetchRequest()
-      taskRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+  func readAllTask() -> [Task] {
+    let dailyRequest: NSFetchRequest<Task> = Task.fetchRequest()
+    do {
+        let dailyResults = try coreDataStack.mainContext.fetch(dailyRequest)
+        if dailyResults.count > 0 {
+            return dailyResults
+        } else {
+          return []
+        }
+    } catch let error as NSError {
+        print(error)
+        return []
+    }
+}
 
-      do {
-          let taskResults = try coreDataStack.mainContext.fetch(taskRequest)
-          if let object = taskResults.first {
-              coreDataStack.mainContext.delete(object)
-              coreDataStack.saveContext()
-              return true
-          } else {
-              return false
-          }
-      } catch let error as NSError {
-          print(error)
-          return false
-      }
-  }
+  func deleteTask(task: Task) -> Bool {
+        do {
+          try coreDataStack.mainContext.delete(task)
+          coreDataStack.saveContext()
+          return true
+        } catch let error as NSError {
+            print(error)
+            return false
+        }
+    }
 
 }

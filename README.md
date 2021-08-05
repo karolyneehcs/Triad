@@ -18,6 +18,10 @@ Open the project in the Project navigator within Xcode and select each of the ta
 
 With your project open, go to Scheme > New Scheme. Select the target Triad and set up the iPhone 11 for running and building the application. 
 
+4) Run your code
+
+You can Run going into Product > Run, or simply pressing command + R.
+
 ## About Triad
 
 Lister is a Cocoa productivity sample code project for iOS and OS X. In this sample, the user can create lists, add items to lists, and track the progress of items in the lists.
